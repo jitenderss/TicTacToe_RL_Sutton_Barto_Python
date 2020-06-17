@@ -37,7 +37,6 @@ class TicAgent:
 
     def reset(self):
         self.states = []
-        self.greedy = []
         #self.initValueEstimates()
 
     def findaction(self):
@@ -62,7 +61,6 @@ class TicAgent:
 
         if self.training is True and np.random.rand() < self.epsilon:
             action = next_positions[np.random.randint(len(next_positions))]
-            #self.greedy[-1] = False
             return action
 
         value = []
